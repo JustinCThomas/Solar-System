@@ -23,7 +23,8 @@ html {
 }
 
 body {
-  background: linear-gradient(black, grey, black);
+  background-color: #111111;
+  /*background: linear-gradient(black, grey, black);*/
   text-align: center;
 }
 
@@ -77,32 +78,32 @@ img[alt="Mars"] {
 }
 
 img[alt="Jupiter"] {
-  height: 400px;
-  width: 400px;
+  height: 42px;
+  width: 42px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--jupiter-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--jupiter-diameter)));
   animation: jupiter-orbit 118.7s linear infinite;
 }
 
 img[alt="Saturn"] {
-  height: 400px;
-  width: 400px;
+  height:35px;
+  width: 35px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--saturn-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--saturn-diameter)));
   animation: saturn-orbit 294.7s linear infinite;
 }
 
 img[alt="Uranus"] {
-  height: 400px;
-  width: 400px;
+  height: 15px;
+  width: 15px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--uranus-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--uranus-diameter)));
   animation: uranus-orbit 840.8s linear infinite;
 }
 
 img[alt="Neptune"] {
-  height: 400px;
-  width: 400px;
+  height: 14px;
+  width: 14px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--neptune-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--neptune-diameter)));
   animation: neptune-orbit 1648.8s linear infinite;
