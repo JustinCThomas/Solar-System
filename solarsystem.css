@@ -13,12 +13,27 @@
   --neptune-diameter: 49528;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   height: 100%;
 }
 
 body {
   background: linear-gradient(black, grey, black);
+  text-align: center;
+}
+
+.planets {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 190px;
 }
 
 img[alt="Sun"] {
@@ -47,6 +62,7 @@ img[alt="Earth"] {
   width: 3.66px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--earth-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--earth-diameter)));
+  animation: earth-orbit 10s linear infinite;
 }
 
 img[alt="Mars"] {
@@ -82,4 +98,9 @@ img[alt="Neptune"] {
   width: 400px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--neptune-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--neptune-diameter)));
+}
+
+@keyframes earth-orbit {
+  from { transform: rotate(0deg) translateX(200px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(200px) rotate(-360deg)}
 }
