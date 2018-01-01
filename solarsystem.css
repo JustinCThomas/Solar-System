@@ -33,12 +33,13 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 190px;
+  top: 390px;
 }
 
 img[alt="Sun"] {
   height: 400px;
   width: 400px;
+  margin-top: 200px;
   height: var(--sun-height);
   width: var(--sun-width);
 }
@@ -48,6 +49,7 @@ img[alt="Mercury"] {
   width: 1.39px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--mercury-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--mercury-diameter)));
+  animation: mercury-orbit 10s linear infinite;
 }
 
 img[alt="Venus"] {
@@ -55,6 +57,7 @@ img[alt="Venus"] {
   width: 3.47px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--venus-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--venus-diameter)));
+  animation: venus-orbit 10s linear infinite;
 }
 
 img[alt="Earth"] {
@@ -70,6 +73,7 @@ img[alt="Mars"] {
   width: 400px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--mars-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--mars-diameter)));
+  animation: mars-orbit 10s linear infinite;
 }
 
 img[alt="Jupiter"] {
@@ -77,6 +81,7 @@ img[alt="Jupiter"] {
   width: 400px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--jupiter-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--jupiter-diameter)));
+  animation: jupiter-orbit 10s linear infinite;
 }
 
 img[alt="Saturn"] {
@@ -84,6 +89,7 @@ img[alt="Saturn"] {
   width: 400px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--saturn-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--saturn-diameter)));
+  animation: saturn-orbit 10s linear infinite;
 }
 
 img[alt="Uranus"] {
@@ -91,6 +97,7 @@ img[alt="Uranus"] {
   width: 400px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--uranus-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--uranus-diameter)));
+  animation: uranus-orbit 10s linear infinite;
 }
 
 img[alt="Neptune"] {
@@ -98,9 +105,45 @@ img[alt="Neptune"] {
   width: 400px;
   height: calc(var(--sun-height) / calc(var(--sun-diameter) / var(--neptune-diameter)));
   width: calc(var(--sun-width) / calc(var(--sun-diameter) / var(--neptune-diameter)));
+  animation: neptune-orbit 10s linear infinite;
+}
+
+@keyframes mercury-orbit {
+  from { transform: rotate(0deg) translateX(200px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(200px) rotate(-360deg)}
+}
+
+@keyframes venus-orbit {
+  from { transform: rotate(0deg) translateX(250px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(250px) rotate(-360deg)}
 }
 
 @keyframes earth-orbit {
-  from { transform: rotate(0deg) translateX(200px) rotate(0deg)}
-  to { transform: rotate(360deg) translateX(200px) rotate(-360deg)}
+  from { transform: rotate(0deg) translateX(300px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(300px) rotate(-360deg)}
+}
+
+@keyframes mars-orbit {
+  from { transform: rotate(0deg) translateX(350px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(350px) rotate(-360deg)}
+}
+
+@keyframes jupiter-orbit {
+  from { transform: rotate(0deg) translateX(400px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(400px) rotate(-360deg)}
+}
+
+@keyframes saturn-orbit {
+  from { transform: rotate(0deg) translateX(450px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(450px) rotate(-360deg)}
+}
+
+@keyframes uranus-orbit {
+  from { transform: rotate(0deg) translateX(500px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(500px) rotate(-360deg)}
+}
+
+@keyframes neptune-orbit {
+  from { transform: rotate(0deg) translateX(550px) rotate(0deg)}
+  to { transform: rotate(360deg) translateX(550px) rotate(-360deg)}
 }
